@@ -22,7 +22,7 @@ export class PaginationService {
 
     const startIndex = (page - 1) * limit
     const endIndex = startIndex + limit
-    const paginatedData = items.slice(startIndex, endIndex)
+    const paginatedData = startIndex >= totalItems ? [] : items.slice(startIndex, endIndex)
 
     return {
       data: paginatedData,

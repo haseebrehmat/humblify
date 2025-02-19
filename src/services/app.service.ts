@@ -22,7 +22,7 @@ export class AppService {
     return superhero
   }
 
-  getSuperheroes(page: number, limit: number): PaginatedResult<Superhero> {
+  getSuperheroes(page?: number, limit?: number): PaginatedResult<Superhero> {
     const sortedHeroes = [...this.superheroes].sort((a, b) => b.humilityScore - a.humilityScore)
     return this.paginationService.paginate(sortedHeroes, page, limit)
   }
