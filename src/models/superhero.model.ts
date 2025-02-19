@@ -1,5 +1,5 @@
 export class Superhero {
-  name: string;
-  superpower: string;
-  humilityScore: number;
-} 
+  name: string
+  superpower: string
+  humilityScore: number
+}
