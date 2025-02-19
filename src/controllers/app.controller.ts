@@ -17,7 +17,7 @@ export class AppController {
   @Get()
   @ApiQuery({ name: 'page', required: false, example: 1, description: 'Page number' })
   @ApiQuery({ name: 'limit', required: false, example: 10, description: 'Number of items per page' })
-  getSuperheroes(@Query('page') page = '1', @Query('limit') limit = '2') {
+  getSuperheroes(@Query('page') page = '1', @Query('limit') limit = '10') {
     return this.appService.getSuperheroes(parseInt(page, 10) || 1, parseInt(limit, 10) || 10)
   }
 }
