@@ -36,7 +36,7 @@ Before running the project, ensure you have the following installed:
 | `dto/create-superhero.dto.ts` | Defines data validation for creating a superhero. |
 </details>
 
-<details>
+<details open>
 <summary>Superhero Controller</summary>
 
 ### Superhero Controller (`superhero.controller.ts`)
@@ -47,7 +47,7 @@ Before running the project, ensure you have the following installed:
 
 </details>
 
-<details>
+<details open>
 <summary>Superhero Service</summary>
 
 ### Superhero Service (`superhero.service.ts`)
@@ -58,7 +58,7 @@ Before running the project, ensure you have the following installed:
 
 </details>
 
-<details>
+<details open>
 <summary>Superhero DTO</summary>
 
 ### DTO (`create-superhero.dto.ts`)
@@ -70,7 +70,7 @@ Before running the project, ensure you have the following installed:
 
 </details>
 
-<details>
+<details open>
 <summary>Superhero Model</summary>
 
 ### Model (`superhero.model.ts`)
@@ -82,11 +82,30 @@ Before running the project, ensure you have the following installed:
 
 </details>
 
-## API Endpoints
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| `GET` | `/superheroes` | Fetch all superheroes. |
-| `POST` | `/superheroes` | Create a new superhero. |
+## API Reference
+
+#### Get all heros
+
+```http
+  GET /superheroes
+```
+
+| Query Param | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `page` | `int` | **Optional**. Page Number |
+| `limit` | `int` | **Optional**. Number of records |
+
+#### Add superhero
+
+```http
+  POST /superheroes
+```
+
+| Body Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` | **Required**. Name |
+| `superpower`| `string` | **Required**. Superpower of hero |
+| `humilityScore`| `string` | **Required**. Score b/w 1 to 10 |
 
 ## Swagger Documentation
 The API is documented using Swagger.
